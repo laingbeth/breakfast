@@ -1,0 +1,25 @@
+<html>
+<header>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+</header>
+
+
+<h1> Breakfast Menu</h1>
+<h2> Today we are offering a variety of cereals </h2>
+
+<ul>  
+  <% @cereals.each do |c| %>
+    <li>
+      <strong> <%= c.name %></strong> -- <%= c.category %> -- <%= c.quantity %>  ---- <%= link_to "More information", cereal_path(c) %> -- <%= link_to "Update information", edit_cereal_path(c) %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to "Add a new cereal to the mix!", new_cereal_path %>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
