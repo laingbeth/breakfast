@@ -1,0 +1,13 @@
+<h2> Cereal Details </h2>
+
+<h1>  <%= @cereal.name %> </h1>
+
+<p> This cereal is available most mornings.  It is a <%= @cereal.category %> cereal.</p>
+  We currently have <%= @cereal.quantity %> boxes on hand. </p>
+
+
+
+<br>
+<%= link_to "Edit this cereal", edit_cereal_path(@cereal) %> <br>
+<%= link_to "Delete this cereal", @cereal, method: :delete, data: { confirm: "Yes, this cereal is all gone!"} %> <br>
+<%= link_to "Go back to the list", cereals_path %>
