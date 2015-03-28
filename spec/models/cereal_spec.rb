@@ -1,3 +1,5 @@
+ require 'cereal'
+ 
  describe Cereal do
   it "is valid with a name, category and quantity" do
     cereal = Cereal.new(
